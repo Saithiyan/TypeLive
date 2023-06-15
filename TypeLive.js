@@ -11,6 +11,23 @@ class TypeLive {
     }
   }
 
+  tabTyping(tab, speedTyping, speedRemove, delaiTyping, i = 0) {
+    let a = 0;
+    this.startTyping(tab[a], speedTyping, (delaiTyping = 1500)).removeAllText(
+      speedRemove
+    );
+    a++;
+    setInterval(() => {
+      if (a >= tab.length) {
+        return 0;
+      }
+      this.startTyping(tab[a], speedTyping, delaiTyping).removeAllText(
+        speedRemove
+      );
+      a++;
+    }, 3000);
+  }
+
   removeAllText(speed, i = 0) {
     let length = this.selectedElement.textContent.length;
     i = length;
@@ -64,5 +81,38 @@ class TypeLive {
       this.removeAllText(speed);
     }, delai);
     return this;
+  }
+
+  //loops:
+  loopTyping(text, speedTyping, speedRemove, interval = 0) {
+    interval = 3000 + interval + speedTyping * text.length;
+
+    this.startTyping(text, speedTyping, 500).startRemoveAllText(
+      speedRemove,
+      500
+    );
+    setInterval(() => {
+      this.startTyping(text, speedTyping, 1000).startRemoveAllText(
+        speedRemove,
+        0
+      );
+    }, interval);
+  }
+
+  loopTabTyping(
+    tab,
+    speedTyping,
+    speedRemove,
+    delaiTyping,
+    interval = 0,
+    i = 0
+  ) {
+    interval = 8500 + interval + speedTyping * tab.length;
+
+    this.tabTyping(tab, speedTyping, speedRemove, delaiTyping, (i = 0));
+
+    setInterval(() => {
+      this.tabTyping(tab, speedTyping, speedRemove, delaiTyping, (i = 0));
+    }, interval);
   }
 }
