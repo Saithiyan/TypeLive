@@ -9,6 +9,39 @@ To use TypeLive, you need to include the JavaScript file in your HTML document:
 ```html
 <script src="https://saithiyan.github.io/TypeLive/TypeLive.js"></script>
 ```
+## Download
+
+You have two options to install TypeLive:
+
+Option 1: Download the JavaScript file
+Download the typelive.js file from the TypeLive repository on GitHub.
+
+Place the downloaded typelive.js file in your project directory.
+
+Include the following script tag in your HTML file:
+
+html
+Copy code
+<script src="path/to/typelive.js"></script>
+Make sure to replace "path/to/typelive.js" with the actual path to the typelive.js file within your project.
+
+Option 2: Copy and paste the code
+Open the typelive.js file from the TypeLive repository on GitHub.
+
+Copy the entire code from the file.
+
+Create a new JavaScript file in your project directory and paste the copied code into it.
+
+Include the following script tag in your HTML file:
+
+html
+Copy code
+<script src="path/to/your-js-file.js"></script>
+Make sure to replace "path/to/your-js-file.js" with the actual path to your JavaScript file within your project.
+
+```html
+<script src="https://saithiyan.github.io/TypeLive/TypeLive.js"></script>
+```
 ## Usage
 
 ### Creating an instance
