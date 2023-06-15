@@ -138,7 +138,7 @@ Here's an example of how you can use TypeLive:
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="[typelive.js](https://saithiyan.github.io/TypeLive/TypeLive.js)"></script>
+  <script src="https://saithiyan.github.io/TypeLive/TypeLive.js"></script>
 </head>
 <body>
   <h1 class="element-selector"></h1>
