@@ -2,6 +2,7 @@ class TypeLive {
   constructor(selectedElement) {
     this.selectedElement = document.querySelector(selectedElement);
   }
+  
   typing(text, speed, i = 0) {
     i;
     if (i < text.length) {
