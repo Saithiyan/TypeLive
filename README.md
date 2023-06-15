@@ -8,7 +8,17 @@ TypeLive is a JavaScript class that provides a live typing effect on selected HT
 
 You have three options to install TypeLive:
 
-### Option 1: Download the JavaScript file
+### Option 3: Use the [CDN link](https://saithiyan.github.io/TypeLive/TypeLive.js) : https://saithiyan.github.io/TypeLive/TypeLive.js
+
+Include the following script tag in your HTML file:
+
+```html
+<script src="https://saithiyan.github.io/TypeLive/TypeLive.js"></script>
+```
+
+Using a CDN link has the advantage of not requiring you to download or host the JavaScript file yourself. It allows for easy integration and ensures that you're always using the latest version of TypeLive.
+
+### Option 2: Download the JavaScript file
 
 
 1. Download the typelive.js file from the TypeLive repository on GitHub.
@@ -23,7 +33,7 @@ To use TypeLive, you need to include the JavaScript file in your HTML document:
 
 Make sure to replace "path/to/typelive.js" with the actual path to the typelive.js file within your project.
 
-### Option 2: Copy and paste the code
+### Option 3: Copy and paste the code
 
 1. Open the typelive.js file from the TypeLive repository on GitHub.
 2. Copy the entire code from the file.
@@ -36,16 +46,6 @@ To use TypeLive, you need to include the JavaScript file in your HTML document:
 ```
 
 Make sure to replace "path/to/your-js-file.js" with the actual path to your JavaScript file within your project.
-
-### Option 3: Use the CDN link
-
-Include the following script tag in your HTML file:
-
-```html
-<script src="https://saithiyan.github.io/TypeLive/TypeLive.js"></script>
-```
-
-Using a CDN link has the advantage of not requiring you to download or host the JavaScript file yourself. It allows for easy integration and ensures that you're always using the latest version of TypeLive.
 
 ---
 
@@ -138,7 +138,7 @@ Here's an example of how you can use TypeLive:
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="[typelive.js](https://saithiyan.github.io/TypeLive/TypeLive.js)"></script>
+  <script src="https://saithiyan.github.io/TypeLive/TypeLive.js"></script>
 </head>
 <body>
   <h1 class="element-selector"></h1>
