@@ -4,45 +4,50 @@ TypeLive is a JavaScript class that provides a live typing effect on selected HT
 
 ## Installation
 
+You have three options to install TypeLive:
+
+### Option 1: Download the JavaScript file
+
+
+1. Download the typelive.js file from the TypeLive repository on GitHub.
+2. Place the downloaded typelive.js file in your project directory.
+3. Include the following script tag in your HTML file:
+
 To use TypeLive, you need to include the JavaScript file in your HTML document:
 
-```html
-<script src="https://saithiyan.github.io/TypeLive/TypeLive.js"></script>
-```
-## Download
-
-You have two options to install TypeLive:
-
-Option 1: Download the JavaScript file
-Download the typelive.js file from the TypeLive repository on GitHub.
-
-Place the downloaded typelive.js file in your project directory.
-
-Include the following script tag in your HTML file:
-
-html
-Copy code
+```js
 <script src="path/to/typelive.js"></script>
+```
+
 Make sure to replace "path/to/typelive.js" with the actual path to the typelive.js file within your project.
 
-Option 2: Copy and paste the code
-Open the typelive.js file from the TypeLive repository on GitHub.
+### Option 2: Copy and paste the code
 
-Copy the entire code from the file.
+1. Open the typelive.js file from the TypeLive repository on GitHub.
+2. Copy the entire code from the file.
+3. Create a new JavaScript file in your project directory and paste the copied code into it.
 
-Create a new JavaScript file in your project directory and paste the copied code into it.
+To use TypeLive, you need to include the JavaScript file in your HTML document:
+
+```js
+<script src="path/to/your-js-file.js"></script>
+```
+
+Make sure to replace "path/to/your-js-file.js" with the actual path to your JavaScript file within your project.
+
+### Option 3: Use the CDN link
 
 Include the following script tag in your HTML file:
-
-html
-Copy code
-<script src="path/to/your-js-file.js"></script>
-Make sure to replace "path/to/your-js-file.js" with the actual path to your JavaScript file within your project.
 
 ```html
 <script src="https://saithiyan.github.io/TypeLive/TypeLive.js"></script>
 ```
+
+Using a CDN link has the advantage of not requiring you to download or host the JavaScript file yourself. It allows for easy integration and ensures that you're always using the latest version of TypeLive.
+
 ## Usage
+
+After installing TypeLive, you can start using it in your JavaScript code. Follow the instructions provided in the previous sections to create an instance of TypeLive, type text, remove text, or start with a delay.
 
 ### Creating an instance
 
