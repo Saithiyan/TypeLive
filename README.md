@@ -2,6 +2,8 @@
 
 TypeLive is a JavaScript class that provides a live typing effect on selected HTML elements. It allows you to simulate the process of typing text in real-time.
 
+---
+
 ## Installation
 
 You have three options to install TypeLive:
@@ -45,6 +47,8 @@ Include the following script tag in your HTML file:
 
 Using a CDN link has the advantage of not requiring you to download or host the JavaScript file yourself. It allows for easy integration and ensures that you're always using the latest version of TypeLive.
 
+---
+
 ## Usage
 
 After installing TypeLive, you can start using it in your JavaScript code. Follow the instructions provided in the previous sections to create an instance of TypeLive, type text, remove text, or start with a delay.
@@ -59,25 +63,42 @@ const typewriter = new TypeLive('.element-selector');
 
 ### Typing Text
 
-To start typing text, use the typing method. It takes three parameters: the text to be typed, the speed of typing (in milliseconds), and an optional parameter i that keeps track of the current index. It recursively appends characters to the selected element until the entire text is typed.
+To start typing text, use the `typing` method. It takes three parameters: the text to be typed, the speed of typing (in milliseconds), and an optional parameter i that keeps track of the current index. It recursively appends characters to the selected element until the entire text is typed.
+
 
 ```js
+typing(text, speed, i = 0)
+
 typewriter.typing('Hello, World!', 100);
+```
+### Tab Typing
+
+The `tabTyping` method allows you to type and remove multiple texts from an array with specified delays. It takes five parameters: the array of texts to be typed, the speed of typing (in milliseconds), the speed of text removal (in milliseconds), the delay before typing each text (in milliseconds), and an optional index parameter (default is 0) to keep track of the current index.
+
+```js
+typewriter.tabTyping(tab, speedTyping, speedRemove, delaiTyping, i = 0);
+
+typewriter.tabTyping(['Hello', 'World', 'TypeLive'], 50, 50, 1500);
+
 ```
 
 ### Removing Text
 
 TypeLive provides two methods for removing text: removeAllText and removeText.
 
-The removeAllText method removes all the text from the selected element. It takes two parameters: the speed of removal (in milliseconds) and an optional parameter i that keeps track of the current index. It recursively removes characters from the selected element until there is no text remaining.
+The `removeAllText` method removes all the text from the selected element. It takes two parameters: the speed of removal (in milliseconds) and an optional parameter i that keeps track of the current index. It recursively removes characters from the selected element until there is no text remaining.
 
 ```js
+typewriter.removeAllText(speed, i = 0);
+
 typewriter.removeAllText(50);
 ```
 
-The removeText method removes a specific number of characters from the end of the text in the selected element. It takes two parameters: the number of characters to remove and the speed of removal (in milliseconds).
+The `removeText` method removes a specific number of characters from the end of the text in the selected element. It takes two parameters: the number of characters to remove and the speed of removal (in milliseconds).
 
 ```js
+typewriter.removeText(text, speed);
+
 typewriter.removeText(5, 50);
 ```
 
@@ -85,22 +106,28 @@ typewriter.removeText(5, 50);
 
 TypeLive also provides methods to start the typing or removal process with a delay. These methods are useful when you want to control the timing of the effect.
 
-The startTyping method starts the typing process with a delay. It takes three parameters: the text to be typed, the speed of typing (in milliseconds), and an optional delay before starting (in milliseconds).
+The `startTyping` method starts the typing process with a delay. It takes three parameters: the text to be typed, the speed of typing (in milliseconds), and an optional delay before starting (in milliseconds).
 
 
 ```js
+typewriter.startTyping(text, speed, delai = 0);
+
 typewriter.startTyping('Hello, World!', 100, 2000);
 ```
 
-The startRemove method starts the removal process with a delay. It takes three parameters: the number of characters to remove, the speed of removal (in milliseconds), and an optional delay before starting (in milliseconds).
+The `startRemove` method starts the removal process with a delay. It takes three parameters: the number of characters to remove, the speed of removal (in milliseconds), and an optional delay before starting (in milliseconds).
 
 ```js
+typewriter.startRemove(text, speed, delai)
+
 typewriter.startRemove(5, 50, 3000);
 ```
 
-The startRemoveAllText method starts removing all the text with a delay. It takes two parameters: the speed of removal (in milliseconds) and an optional delay before starting (in milliseconds).
+The `startRemoveAllText` method starts removing all the text with a delay. It takes two parameters: the speed of removal (in milliseconds) and an optional delay before starting (in milliseconds).
 
 ```js
+typewriter.startRemoveAllText(speed, delai)
+
 typewriter.startRemoveAllText(50, 5000);
 ```
 
@@ -128,6 +155,51 @@ Here's an example of how you can use TypeLive:
 ```
 
 In the example above, the text "Hello, World!" will be typed in the selected element, followed by the removal of all the text. After a delay of 2 seconds, the text "Welcome!" will be typed.
+
+---
+
+## Available Methods : Loops
+
+TypeLive provides several methods that allow you to create different typing effects. Here are the new methods you have added:
+
+### Loop Typing
+
+The `loopTyping` method allows you to create a loop that repeatedly types and removes text at specified intervals. It takes four parameters: the text to be typed, the speed of typing (in milliseconds), the speed of text removal (in milliseconds), and an optional interval (in milliseconds) between each loop.
+
+```js
+loopTyping(text, speedTyping, speedRemove, interval = 0);
+
+typewriter.loopTyping('Hello, World!', 50, 50, 3000);
+```
+
+### Loop Tab Typing
+
+The `loopTabTyping` method allows you to create a loop that iterates through an array of texts and types and removes each text at specified intervals. It takes five parameters: the array of texts to be typed, the speed of typing (in milliseconds), the speed of text removal (in milliseconds), the delay before typing each text (in milliseconds), and an optional interval (in milliseconds) between each loop.
+
+```js
+loopTabTyping(tab, speedTyping, speedRemove, delaiTyping, interval = 0, i = 0);
+
+typewriter.loopTabTyping(['Hello', 'World', 'TypeLive'], 50, 50, 1500, 5000);
+```
+
+---
+
+Feel free to modify the parameters and experiment with different typing effects.
+
+Contributing
+If you'd like to contribute to TypeLive, please follow these guidelines:
+
+Fork the TypeLive repository on GitHub.
+
+Create a new branch for your feature or bug fix.
+
+Make your changes and commit them with descriptive messages.
+
+Push your changes to your forked repository.
+
+Submit a pull request to the main TypeLive repository.
+
+We appreciate your contributions!
 
 ## License
 
