@@ -184,23 +184,6 @@ typewriter.loopTabTyping(['Hello', 'World', 'TypeLive'], 50, 50, 1500, 5000);
 
 ---
 
-Feel free to modify the parameters and experiment with different typing effects.
-
-Contributing
-If you'd like to contribute to TypeLive, please follow these guidelines:
-
-Fork the TypeLive repository on GitHub.
-
-Create a new branch for your feature or bug fix.
-
-Make your changes and commit them with descriptive messages.
-
-Push your changes to your forked repository.
-
-Submit a pull request to the main TypeLive repository.
-
-We appreciate your contributions!
-
 ## License
 
 TypeLive is released under the MIT License. See [LICENSE](LICENSE) for more information.
@@ -208,6 +191,18 @@ TypeLive is released under the MIT License. See [LICENSE](LICENSE) for more info
 ## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or improvements, please open an issue or submit a pull request.
+
+Feel free to modify the parameters and experiment with different typing effects.
+
+If you'd like to contribute to TypeLive, please follow these guidelines:
+
+1. Fork the TypeLive repository on GitHub.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to your forked repository.
+5. Submit a pull request to the main TypeLive repository.
+
+We appreciate your contributions!
 
 ## Acknowledgements
 
