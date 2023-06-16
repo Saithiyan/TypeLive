@@ -2,7 +2,23 @@ class TypeLive {
   constructor(selectedElement) {
     this.selectedElement = document.querySelector(selectedElement);
   }
-  
+
+  cursor(char = "|") {
+    setInterval(() => {
+      let promise = new Promise((resolve, reject) => {
+        this.typing(" " + char, 0);
+
+        setTimeout(() => {
+          resolve("ok");
+        }, 500);
+      }).then((res) => {
+        this.removeText(2, 0);
+        // console.log(char.length, 'removed');
+      });
+    }, 1000);
+    return this;
+  }
+
   typing(text, speed, i = 0) {
     i;
     if (i < text.length) {
